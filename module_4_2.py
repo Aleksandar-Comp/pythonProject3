@@ -4,4 +4,6 @@ def test_function():
         return
     inner_function()
     return
-test_function()
+inner_function()
+
+
