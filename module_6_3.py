@@ -21,7 +21,6 @@ class Pegasus(Horse, Eagle):
 
     def __init__(self):
         super().__init__()
-        super().__init__()
 
 
     def move(self, dx, dy):
