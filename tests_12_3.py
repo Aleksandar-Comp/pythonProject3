@@ -9,22 +9,22 @@ class RunnerTest(unittest.TestCase):
 
     @unittest.skipIf(is_frozen, "Тесты в этом кейсе заморожены")
     def test_walk(self):
-        runner_1 = r.Runner('Данил')
+        runner_1 = r.Runner('Саша')
         for _ in range(10):
             runner_1.walk()
         self.assertEqual(runner_1.distance, 50)
 
     @unittest.skipIf(is_frozen, "Тесты в этом кейсе заморожены")
     def test_run(self):
-        runner_2 = r.Runner('Миша')
+        runner_2 = r.Runner('Даша')
         for _ in range(10):
             runner_2.run()
         self.assertEqual(runner_2.distance, 100)
 
     @unittest.skipIf(is_frozen, "Тесты в этом кейсе заморожены")
     def test_challenge(self):
-        runner_3 = r.Runner("Лёша")
-        runner_4 = r.Runner("Вася")
+        runner_3 = r.Runner("Вова")
+        runner_4 = r.Runner("Рома")
         for _ in range(10):
             runner_3.run()
             runner_4.walk()
