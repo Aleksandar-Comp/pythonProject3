@@ -7,7 +7,7 @@ from crud_functions import *
 
 from crud_functions import check_and_populate_products, get_all_products, initiate_db
 
-api = "8172838769:AAEB3sFRHDh-mpNM7Uc23WmlfM-lTu_dg7k"
+api = ""
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
