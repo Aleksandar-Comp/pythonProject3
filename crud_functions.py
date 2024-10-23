@@ -1,6 +1,5 @@
 import sqlite3
 
-
 def initiate_db():
     connection = sqlite3.connect('products.dp')
     cursor = connection.cursor()
@@ -17,7 +16,6 @@ def initiate_db():
     connection.commit()
     connection.close()
 
-
 def check_and_populate_products():
     connection = sqlite3.connect('products.dp')
     cursor = connection.cursor()
@@ -29,14 +27,13 @@ def check_and_populate_products():
         for i in range(1, 5):
             cursor.execute(
                 'INSERT INTO Products(title, description, price) VALUES (?, ?, ?)',
-                (f'Продукт {i}', f'Описание {i}', f'{i * 100}')
+                (f'Продукт {i}', f'Описание {i}', f'{i*100}')
             )
     else:
         pass
 
     connection.commit()
     connection.close()
-
 
 def get_all_products():
     connection = sqlite3.connect('products.dp')
