@@ -13,7 +13,7 @@ initiate_db()
 products = get_all_products()
 
 
-api = '8172838769:AAEB3sFRHDh-mpNM7Uc23WmlfM-lTu_dg7k'
+api = ''
 bot = Bot(token=api)
 dp = Dispatcher(bot, storage=MemoryStorage())
 
