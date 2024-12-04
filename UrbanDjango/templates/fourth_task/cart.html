@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends "fourth_task/menu.html" %}
+
+{% block pagename %}
+    <h1>Корзина</h1>
+{% endblock %}
+{% block menu %}
+{{block.super}}
+{% endblock %}
+{% block content %}
+    <h2>Извините, ваша корзина пуста</h2>
+    <a href="http://127.0.0.1:8000/platform">
+        <button>Вернуться на главную страницу</button>
+    </a>
+    <a href="http://127.0.0.1:8000/platform/games">
+        <button>Вернуться в Магазин</button>
+    </a>
+{% endblock %}
+</body>
+</html>
