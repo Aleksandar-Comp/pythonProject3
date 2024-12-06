@@ -17,10 +17,14 @@ Including another URLconf
 from tempfile import template
 from django.contrib import admin
 from django.urls import path
-from UrbanDjango.task2.views import func_template, ClassTemplates
+#from UrbanDjango.task2.views import func_template, ClassTemplates
+from task3.views import platform, games,cart
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('func/', func_template),
-    path('class/', ClassTemplates.as_view())
+    #path('func/', func_template),
+    #path('class/', ClassTemplates.as_view())
+    path('platform/', platform),
+    path('platform/games/', games),
+    path('platform/cart', cart)
 ]
