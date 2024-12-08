@@ -5,20 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-    {% extends "fourth_task/menu.html" %}
+    {% extends 'fourth_task/menu.html' %}
 
-{% block pagename %}
-    <h1>Игры</h1>
-{% endblock %}
-{% block menu %}
-    {{block.super}}
-{% endblock %}
-{% block content %}
-    {% for key, value in game_dict.items %}
-        {% for i in value %}
-            <p>{{ i }}<button>Купить</button> </p>
-        {% endfor %}
-    {% endfor %}
-{% endblock %}
+    {% block title %}Магазин{% endblock %}
+    {% block pagename %}Магазин{% endblock %}
+
+    {% block content %}
+        <h1>Игры</h1>
+        <ul>
+            {% for game in games %}
+                <li>
+                    {{ game.title }} | {{ game.description }}. Стоимость: {{ game.cost }}
+                    <button>Купить</button>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="/platform/"><button>Вернуться обратно</button></a>
+    {% endblock %}
 </body>
 </html>

@@ -5,16 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-    {% extends "fourth_task/menu.html" %}
+    {% extends 'fourth_task/menu.html' %}
 
-{% block pagename %}
-    <h1>Главная страница</h1>
-{% endblock %}
-{% block menu %}
-{{block.super}}
-{% endblock %}
-{% block content %}
-    <h2></h2>
-{% endblock %}
+    {% block title %}Главная страница{% endblock %}
+    {% block pagename %}Главная страница{% endblock %}
+
+    {% block content %}
+        <p>Добро пожаловать на главную страницу!</p>
+    {% endblock %}
 </body>
 </html>

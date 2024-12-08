@@ -17,6 +17,7 @@ Including another URLconf
 #from tempfile import template
 from django.contrib import admin
 from django.urls import path
+from task1.views import platform, games, cart, sign_up_by_html, sign_up_by_django
 #from UrbanDjango.task2.views import func_template, ClassTemplates
 #from task3.views import platform, games,cart
 #from task4.views import platform, games, cart
@@ -25,6 +26,11 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('platform/', platform),
+    path('platform/games/', games),
+    path('platform/cart/', cart),
+    path("html_forms/", sign_up_by_html),
+    path("django_forms/", sign_up_by_django),
     #path('func/', func_template),
     #path('class/', ClassTemplates.as_view())
     #path('platform/', platform),
