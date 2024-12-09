@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel = 'stylesheet' type="text/css" href = '{% static "style.css" %}'>
+</head>
+<body>
+     {% block menu %}
+    <h2><a href="/">Главная</a>
+    <a href="/shop">Магазин</a>
+    <a href="/basket">Корзина</a>
+    <a href="/sign_up">Регистрация</a></h2>
+    {% endblock %}
+
+    {% block pagename %}
+    <h1> Заголовок страницы </h1>
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

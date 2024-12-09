@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends "menu.html" %}
+
+    {% block title %} Home - {{ block.super }} {% endblock %}
+
+    {% block menu %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block pagename %}
+        <h1> Главная страница </h1>
+    {% endblock %}
+
+    {% block content %}
+        <p> Вы находитесь на главной странице </p>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends "menu.html" %}
+
+    {% block title %} Basket - {{ block.super }} {% endblock %}
+
+    {% block menu %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block pagename %}
+        <h1> Корзина </h1>
+    {% endblock %}
+
+    {% block content %}
+        <p> В корзине нет товаров </p>
+    {% endblock %}
+</body>
+</html>

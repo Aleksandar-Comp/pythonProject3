@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% extends "menu.html" %}
+
+    {% block title %} Sign Up- {{ block.super }} {% endblock %}
+
+    {% block menu %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block pagename %}
+        <h1> Регистрация </h1>
+    {% endblock %}
+
+    {% block content %}
+        <form method="post">
+            <p>{{ info.error }}</p>
+            {% csrf_token %}
+
+            <label for="name">Логин</label>
+            <input type="text" id="name" name="name" maxlength="30" required>
+
+            <label for="balance">Депозит</label>
+            <input type="float" id="balance" name="balance" required>
+
+            <label for="age">Возраст</label>
+            <input type="int" id="age" name="age" max="120" required>
+
+            <button type="submit">Зарегистрироваться</button>
+
+        </form>
+    {% endblock %}
+</body>
+</html>
