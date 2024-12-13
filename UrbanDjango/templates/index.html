@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="row">
+        {% for post in page_posts %}
+            <div class="col-md-4">
+                <h2>{{ post.title }}</h2>
+                <p>{{ post.content }}</p>
+                <p>{{ post.created_ad }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% for i in page_posts.paginator.page_range %}
+    {% if page_posts.number == i %}
+        <a href="#">{{ i }}</a>
+    {% else %}
+        <a href="?page={{ i }}">{{ i }}</a>
+    {% endif %}
+</body>
+</html>
