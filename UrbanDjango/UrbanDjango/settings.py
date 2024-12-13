@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     #'task3'
     #'task4',
     #'task5',
-    'task1',
+    #'task1',
+    'task',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +82,12 @@ WSGI_APPLICATION = 'UrbanDjango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #'NAME': BASE_DIR / 'db.sqlite3',
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "123456789",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 
