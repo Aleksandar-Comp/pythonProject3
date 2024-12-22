@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+"""from django.http import HttpResponse
 from .forms import UserRegister
 from .models import *
 
@@ -45,6 +45,6 @@ def sign_up(request):
                 info['error'] = 'Пользователь уже существует'
     else:
         form = UserRegister()
-    return render(request, 'registration_page.html', {'form': form, 'info': info})
+    return render(request, 'registration_page.html', {'form': form, 'info': info})"""
 
 # Create your views here.
